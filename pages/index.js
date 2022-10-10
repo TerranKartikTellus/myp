@@ -12,12 +12,13 @@ import Footer from "../components/11. footer"
 
 export default function Home() {
   return (
-    <div className=" bg-[#EEEEEE] font-inter">
-      {/* <img className="z-0 w-full absolute top-0 left-0 " src="/svg/blueBgStyle.svg"></img> */}
+    <div className=" font-inter relative">
+      <img className=" w-full z-0 " src="/svg/blueBgStyle.svg"></img>
       
-      
-      <div className="w-full z-10"><Nav></Nav></div>
-      <div className="w-full z-10"><Banner></Banner></div>
+      <div className="absolute top-0">
+
+      <div className="w-full z-10 bg-transparent pt-12"><Nav></Nav></div>
+      <div className="w-full z-"><Banner></Banner></div>
       <div className="w-full z-10"><Dash></Dash></div>
       <div className="w-full z-10"><Org></Org></div>
       <div className="w-full z-10"><Services></Services></div>
@@ -27,6 +28,7 @@ export default function Home() {
       <div className="w-full z-10"><Review></Review></div>
       <div className="w-full z-10"><GrowBiz></GrowBiz></div>
       <div className="w-full z-10"><Footer></Footer></div>
+      </div>
       {/* </div> */}
     </div>
   )
