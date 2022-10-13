@@ -11,11 +11,13 @@ import GrowBiz from "../components/10. bannerGrowBiz"
 import Footer from "../components/11. footer"
 import Opacity from "../components/animate/opacity"
 import Y from "../components/animate/y"
+import HeadTag from "../components/Head"
 
 export default function Home() {
   return (
     <div className="w-screen bg-transparent font-inter relative">
       <img className=" w-full z-0 " src="/svg/blueBgStyle.svg"></img>
+      <HeadTag ></HeadTag>
       
       <div className="absolute w-full top-0">
        <Opacity initial={ 0 } final={ 1 } duration={0.3} delay={0}>
