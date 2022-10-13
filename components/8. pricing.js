@@ -26,7 +26,7 @@ function Plan(){
 function Cards(){
   return(
     <div className="flex flex-row items-center justify-center space-x-3  pb-20">
-      <div className="rounded-[14px] px-5 py-8 bg-[#FFFFFF]  h-[570px] shadow w-[384px]  flex flex-col items-center justify-between">
+      <div className="rounded-[14px] px-5 py-8 bg-[#FFFFFF]  h-[570px] shadow-lg hover:shadow-md w-[384px] transition-shadow duration-150 ease-in-out flex flex-col items-center justify-between">
         <div className="bg-[#FFFFFF] w-full h-full">
 
               <div className="px-3">
@@ -61,7 +61,7 @@ function Cards(){
       </div>
 
 
-  <div className="rounded-[14px] px-5 py-8 h-[590px] text-white bg-gradient-to-br from-[#2272FF] to-[#0D03C3]   shadow-md w-[384px]  flex flex-col items-center justify-between">
+  <div className="rounded-[14px] px-5 py-8 h-[590px] text-white bg-gradient-to-br from-[#2272FF] to-[#0D03C3] transition-shadow duration-150 ease-in-out   shadow-lg hover:shadow-md w-[384px]  flex flex-col items-center justify-between">
         <div className=" w-full h-full">
 
               <div className="px-3">
@@ -104,7 +104,7 @@ function Cards(){
 
  
 
-     <div className="rounded-[14px] px-5 py-8 bg-[#FFFFFF]  h-[570px] shadow w-[384px]  flex flex-col items-center justify-between">
+     <div className="rounded-[14px] px-5 py-8 bg-[#FFFFFF]  h-[570px] shadow-lg hover:shadow-md w-[384px] transition-shadow duration-150 ease-in-out  flex flex-col items-center justify-between">
         <div className="bg-[#FFFFFF] w-full h-full">
 
               <div className="px-3">

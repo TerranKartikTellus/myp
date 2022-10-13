@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Services(){
   return(
-    <div className="text-center h-[825px]">
+    <div className="text-center h-[655px]">
       <h1 className="text-black font-sans text-[55px] font-bold ">Our services made<br></br> for you?</h1>
       <div className="flex flex-row items-center justify-center space-x-10 mb-">
         

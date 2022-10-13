@@ -7,7 +7,7 @@ export default function Review(){
       <div className="flex flex-row items-center justify-center space-x-3 pt-10 pb-28">
         
         
-        <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl px-10 py-16">
+        <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl -lg hover:shadow-lg transition-all duration-150 ease-in-out px-10 py-16">
           <img src="/svg/ico/stars.svg"></img>
           <p className="text-[17px] font-medium text-black/90 font-sans tracking-tight my-8 w-[270px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna</p>
 
@@ -20,7 +20,7 @@ export default function Review(){
           </div>
         </div>
 
-         <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl px-10 py-16">
+         <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl -lg hover:shadow-lg transition-all duration-150 ease-in-out px-10 py-16">
           <img src="/svg/ico/stars.svg"></img>
           <p className="text-[17px] font-medium text-black/90 font-sans tracking-tight my-8 w-[270px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna</p>
 
@@ -33,7 +33,7 @@ export default function Review(){
           </div>
         </div>
 
-         <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl px-10 py-16">
+         <div className="w-[350px] h-[350px] bg-white rounded-xl shadow-xl -lg hover:shadow-lg transition-all duration-150 ease-in-out px-10 py-16">
           <img src="/svg/ico/stars.svg"></img>
           <p className="text-[17px] font-medium text-black/90 font-sans tracking-tight my-8 w-[270px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna</p>
 

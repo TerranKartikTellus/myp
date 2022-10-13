@@ -21,39 +21,39 @@ export default function Footer(){
 
       <div className=" flex flex-col items-start justify-start text-left bg-re00 w-2/6">
         <div className="text-[18px] font-bold font-sans pt-10 opacity-80 ">Product</div>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Digital Invoice</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Insights</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Reimbursements</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Virtual Assistant</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Artificial Intelligence</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Digital Invoice</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Insights</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Reimbursements</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Virtual Assistant</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Artificial Intelligence</a></Link>
       </div>
 
 
      <div className=" flex flex-col items-start justify-start text-left bg-re00 w-2/6">
         <div className="text-[18px] font-bold font-sans pt-10 opacity-80 ">Company</div>
-        <Link href=""><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">About Us</a></Link>
-        <Link href=""><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Newsletters</a></Link>
-        <Link href=""><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Our Partners</a></Link>
-        <Link href=""><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Career</a></Link>
-        <Link href=""><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Contact Us</a></Link>
+        <Link href=""><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">About Us</a></Link>
+        <Link href=""><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Newsletters</a></Link>
+        <Link href=""><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Our Partners</a></Link>
+        <Link href=""><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Career</a></Link>
+        <Link href=""><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Contact Us</a></Link>
       </div>
 
       <div className=" flex flex-col items-start justify-start text-left bg-re00 w-2/6">
         <div className="text-[18px] font-bold font-sans pt-10 opacity-80 ">Resources</div>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Pricing</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Blog</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">FAQ</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Events</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Ebook & Guide</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Pricing</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Blog</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">FAQ</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Events</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Ebook & Guide</a></Link>
       </div>
 
       <div className="pr-20 flex flex-col items-start justify-start text-left bg-re00 w-2/6">
-        <Link href="/"><a className="text-[18px] font-bold font-sans pt-10 opacity-80">Follow us</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">LinkedIn</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Twitter</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Instagram</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Facebook</a></Link>
-        <Link href="/"><a className="text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">YouTube</a></Link>
+        <Link href="/"><a className="hover:opacity-70 text-[18px] font-bold font-sans pt-10 opacity-80">Follow us</a></Link>
+        <Link href="/"><a className="hover:opacity-70  text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">LinkedIn</a></Link>
+        <Link href="/"><a className="hover:opacity-70  text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Twitter</a></Link>
+        <Link href="/"><a className="hover:opacity-70  text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Instagram</a></Link>
+        <Link href="/"><a className="hover:opacity-70  text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">Facebook</a></Link>
+        <Link href="/"><a className="hover:opacity-70  text-[16px] w-[159px] text-base font-light text-left font-sans pt-4 opacity-80">YouTube</a></Link>
       </div>
 
       </div>
