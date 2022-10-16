@@ -5,8 +5,8 @@ export default function TimerPage(){
   const [time,setTime] = useState({h:0,m:0,s:0,ms:0});
   const [interv,setInterv] = useState();
   const [status,setStatus] = useState(0);
-  
-
+  const [input,setInput] = useState(1);
+  const [disableResume,setdisableResume] = useState(0);
 
   let newH = time.h;
   let newM = time.m;
@@ -21,8 +21,12 @@ export default function TimerPage(){
 
 function Update(){
   console.log('start :>> ');
+  if(newM==input){
+    Stop();
+    setdisableResume(1);
+  }else{
   if(newM === 60){
-    newH++;
+    newH--;
     newM = 0;
   }
   if(newS === 60){
@@ -35,6 +39,7 @@ function Update(){
     newMS=0;
   }
   newMS++;
+  }
   return setTime({h:newH,m:newM,s:newS,ms:newMS})
 }
 
@@ -53,15 +58,22 @@ function Resume(){
 }
   return (
   <div className="text-center bg-[#0D03C3] text-white h-screen space-y-5 flex flex-col items-center justify-center">
+    <div className="tracking-wide text-3xl opacity-90 mb-10">Timer</div>
     {time&& <Timer time={time}></Timer>}
 
     <div className="flex flex-row space-x-4">
       <button  onClick={Start} disabled={status!= 0 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Start</button>
       <button  onClick={Reset} disabled={status!= 2 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Reset</button>
-      <button  onClick={Resume} disabled={status!= 2 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Resume</button>
+      <button  onClick={Resume} disabled={status!=2 || disableResume ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Resume</button>
       <button  onClick={Stop}  disabled={status!= 1 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Pause</button>
 
     </div>
+    <div>Override</div>
+    {status== 0 &&  
+      <div className="grid-cols-3 gap-2 grid ">
+      <div>Minute</div><input disabled={status!= 0 ? 1 : 0 } placeholder="min: 1 | max: 60" min={1} max={60} className="w-[165px] opacity-90 text-center placeholder-gray-900 tracking-wide text-sm outline-none rounded-sm text-black font-mono p-1" type={'number'} onChange={(e)=>{ setInput(e.target.value) }}></input><div>default: 3 min</div>
+    </div>}
+     {/* <div className="text-xs opacity-95 tracking-wider"> </div> */}
   </div>
 );
 }
