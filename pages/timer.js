@@ -65,10 +65,10 @@ function Resume(){
     {time&& <Timer time={time}></Timer>}
 
     <div className="flex flex-row space-x-4">
-      <button  onClick={Start} disabled={status!= 0 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Start</button>
-      <button  onClick={Reset} disabled={status!= 2 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Reset</button>
-      <button  onClick={Resume} disabled={status!=2 || disableResume ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Resume</button>
-      <button  onClick={Stop}  disabled={status!= 1 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Pause</button>
+      <button  onClick={Start} disabled={status!= 0 ? 1 : 0 }                  className="disabled:scale-95 disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Start</button>
+      <button  onClick={Reset} disabled={status!= 2 ? 1 : 0 }                  className="disabled:scale-95 disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Reset</button>
+      <button  onClick={Resume} disabled={status!=2 || disableResume ? 1 : 0 } className="disabled:scale-95 disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Resume</button>
+      <button  onClick={Stop}  disabled={status!= 1 ? 1 : 0 }                  className="disabled:scale-95 disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Pause</button>
 
     </div>
     {/* <div>Override</div> */}
