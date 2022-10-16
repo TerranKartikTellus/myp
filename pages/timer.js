@@ -1,51 +1,95 @@
 import { useState } from "react";
 
-export default function Timer(){
+export default function TimerPage(){
 
-  const [min, setMin] = useState(3);
-  const [sec, setSec] = useState(3*60);
-
-
-  function start(){
-
-  }
-
+  const [time,setTime] = useState({h:0,m:0,s:0,ms:0});
+  const [interv,setInterv] = useState();
+  const [status,setStatus] = useState(0);
   
-  function pause(){
-    
+
+
+  let newH = time.h;
+  let newM = time.m;
+  let newS = time.s;
+  let newMS = time.ms;
+
+  function Start(){
+    Update();
+    setInterv( setInterval(Update,10) );
+    setStatus(1);
   }
 
-  
-  function contin(){
-    
+function Update(){
+  console.log('start :>> ');
+  if(newM === 60){
+    newH++;
+    newM = 0;
   }
+  if(newS === 60){
+    newM++;
+    newS=0;
+  }
+  
+  if(newMS === 100){
+    newS++;
+    newMS=0;
+  }
+  newMS++;
+  return setTime({h:newH,m:newM,s:newS,ms:newMS})
+}
 
-  function reset(){
-    
-  }
-  
+function Stop(){
+  clearInterval(interv);
+  setStatus(2);
+}
+
+function Reset(){
+  clearInterval(interv);
+  setStatus(0);
+  setTime({h:0,m:0,s:0,ms:0});
+}
+function Resume(){
+  Start();
+}
+  return (
+  <div className="text-center bg-[#0D03C3] text-white h-screen space-y-5 flex flex-col items-center justify-center">
+    {time&& <Timer time={time}></Timer>}
+
+    <div className="flex flex-row space-x-4">
+      <button  onClick={Start} disabled={status!= 0 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Start</button>
+      <button  onClick={Reset} disabled={status!= 2 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Reset</button>
+      <button  onClick={Resume} disabled={status!= 2 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Resume</button>
+      <button  onClick={Stop}  disabled={status!= 1 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Pause</button>
+
+    </div>
+  </div>
+);
+}
+
+function Timer({time}){
   return(
-    <div className="flex flex-col items-center justify-center h-screen bg-[#0D03C3] text-gray-50">
-        <h1 className="text-xl">{sec}</h1>
-        <h1 className="text-5xl">Timer</h1>
-        <h1 className="h-20 text-center flex flex-row items-center justify-center text-3xl "><p className="opacity-100">{sec} seconds : {sec/60} min</p></h1>
-        <input onChange={(e)=>{
-          setMin(e.target.value);
-          setSec(e.target.value*60)
-        }} type="" placeholder="" className="p-2 border-b-4 border-white bg-transparent outline-none opacity-80 text-base mb-4 text-white placeholder:text-white w-20" />  
-        <div className="flex flex-row items-center justify-center space-x-4">
-          <button onClick={start} className=" hover:opacity-90  flex flex-row items-center justify-center space-x-2"><StartIco></StartIco><p>Start</p></button>
-          <button onClick={pause} className=" hover:opacity-90  flex flex-row items-center justify-center space-x-2"><PauseIco></PauseIco><p>Pause</p></button>
-          <button onClick={contin} className="hover:opacity-90  flex flex-row items-center justify-center space-x-2"><ContIco></ContIco><p>Continue</p></button>
-          <button onClick={reset} className=" hover:opacity-90  flex flex-row items-center justify-center space-x-2"><ResetIco></ResetIco><p>Reset</p></button>
-        </div>
+    <div>
+    <div className="text-2xl flex flex-row items-center justify-center space-x-1 ">
+      <h1>HH</h1> 
+      <h1>:</h1>
+      <h1>MM</h1> 
+      <h1>:</h1>
+      <h1>SS</h1> 
+      <h1>:</h1>
+      <h1>MS</h1>
+    </div>
+    <div className="tracking-wider opacity-90 text-2xl flex flex-row items-center justify-center space-x-1 ">
+      <h1>{time.h<10 ? "0"+time.h : time.h}</h1> 
+      <h1>:</h1>
+      <h1>{time.m<10 ? "0"+time.m : time.m}</h1> 
+      <h1>:</h1>
+      <h1>{time.s<10 ? "0"+time.s : time.s}</h1> 
+      <h1>:</h1>
+      <h1>{time.ms<10 ? "0"+time.ms : time.ms}</h1>
+    </div>
     </div>
   );
 }
-
-
-
-
 
 
 
