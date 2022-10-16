@@ -5,7 +5,7 @@ export default function TimerPage(){
   const [time,setTime] = useState({h:0,m:0,s:0,ms:0});
   const [interv,setInterv] = useState();
   const [status,setStatus] = useState(0);
-  const [input,setInput] = useState(1);
+  const [input,setInput] = useState(3);
   const [disableResume,setdisableResume] = useState(0);
 
   let newH = time.h;
@@ -58,7 +58,10 @@ function Resume(){
 }
   return (
   <div className="text-center bg-[#0D03C3] text-white h-screen space-y-5 flex flex-col items-center justify-center">
-    <div className="tracking-wide text-3xl opacity-90 mb-10">Timer</div>
+    <div className="tracking-wide text-3xl group transition-opacity duration-200 ease-in-out opacity-90 mb-10">
+      <div className="flex flex-row space-x-2 items-center justify-center"><div>Timer</div> <StartIco></StartIco></div>
+      <div className="group-hover:opacity-95 duration-300 invisible group-hover:visible absolute  opacity-0 text-sm w-[200px] translate-x-20 -translate-y-20 group-hover:translate-x-32">Timer take an input from user with default value set to 3 mins. Using this input a timerwill be set for given duration. Stop the timer When it hit the input minute value.</div>
+    </div>
     {time&& <Timer time={time}></Timer>}
 
     <div className="flex flex-row space-x-4">
@@ -68,10 +71,11 @@ function Resume(){
       <button  onClick={Stop}  disabled={status!= 1 ? 1 : 0 } className="disabled:opacity-50 bg-white text-[#0D03C3] p-4 hover:bg-opacity-80">Pause</button>
 
     </div>
-    <div>Override</div>
+    {/* <div>Override</div> */}
     {status== 0 &&  
       <div className="grid-cols-3 gap-2 grid ">
-      <div>Minute</div><input disabled={status!= 0 ? 1 : 0 } placeholder="min: 1 | max: 60" min={1} max={60} className="w-[165px] opacity-90 text-center placeholder-gray-900 tracking-wide text-sm outline-none rounded-sm text-black font-mono p-1" type={'number'} onChange={(e)=>{ setInput(e.target.value) }}></input><div>default: 3 min</div>
+      <div>Minute</div><input disabled={status!= 0 ? 1 : 0 } placeholder="min: 1 | max: 60" min={1} max={60} className="w-[165px] opacity-90 text-center placeholder-gray-900 tracking-wide text-sm outline-none rounded-sm text-black font-mono p-1" type={'number'} onChange={(e)=>{ setInput(e.target.value) }}></input>
+      <div>default: {input} min </div>
     </div>}
      {/* <div className="text-xs opacity-95 tracking-wider"> </div> */}
   </div>
