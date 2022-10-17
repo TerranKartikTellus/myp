@@ -4,7 +4,7 @@ export const slice = (data) => {
     type: "slice",
     payload:  {
       id: new Date().getTime().toString(),
-      data:  
+      data:  null,
     }
   }
 }
