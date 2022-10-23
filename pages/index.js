@@ -14,6 +14,25 @@ import Y from "../components/animate/y"
 import HeadTag from "../components/Head"
 
 export default function Home() {
+
+
+  let d = {
+  '2020-01-01': 4,
+  '2020-01-02': 4,
+  '2020-01-03': 6,
+  '2020-01-04': 8,
+}
+
+let day = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+// console.log(d.getDay());
+
+for (const key of Object.keys(d)) {
+console.log(key + ":" + d[key])
+    let date = new Date(key);
+    console.log(day[date.getDay()], date.getDay()+d[key] );
+
+};
   return (
     <div className="w-screen bg-transparent font-inter relative">
       <img className=" w-full z-0 " src="/svg/blueBgStyle.svg"></img>
